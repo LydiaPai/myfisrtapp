@@ -4,23 +4,32 @@ void main() {
 
   var appTitle = Text('我的第一個flutter app'),
       hiFlutter=Text(
-        'Hi, Flutter.',
-        style: TextStyle(fontSize: 50),
-      );
+        'Hi, Flutter.0308',
+        style: TextStyle(
+          fontSize: 30,
+        color: Colors.yellow,
+        fontWeight: FontWeight.bold,
+        decoration: TextDecoration. lineThrough,
 
+        ),
+      );
+//建立appBody物件
+  var img = Image.network("https://images.pexels.com/photos/6976092/pexels-photo-6976092.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   var appBody=Center(
-    child: hiFlutter,
+    //child: hiFlutter,
+    child: img,
   );
 
   var appBar=AppBar(
     title: appTitle,
+    backgroundColor: Color(0xffff9800),
   );
 
   var app =MaterialApp(
     home: Scaffold(
       appBar: appBar,
         body: appBody,
-    ),
+      backgroundColor: Colors.red),
   );
   runApp(app);
 }
