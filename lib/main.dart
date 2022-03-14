@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 void main() {
-
-  var appTitle = Text('我的第一個flutter app'),
+  //建立appTitle和hiFlutter物件
+  var appTitle = Text('我的第一個Flutter app'),
       hiFlutter=Text(
         'Hi, Flutter.0308',
+        //利用style參數設定字體大小為50。
+        //設定字體大小的方式是產生一個TextStyle類別的物件，然後利用它的fontSize參數設定字體大小。
         style: TextStyle(
           fontSize: 30,
         color: Colors.yellow,
@@ -13,9 +15,11 @@ void main() {
 
         ),
       );
-//建立appBody物件
-  var img = Image.network("https://images.pexels.com/photos/6976092/pexels-photo-6976092.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
- //  var appBody=Center(
+  //建立appBody物件
+  //appBody物件，它是Center類別的物件。
+  //Center類別的功能是讓物件顯示在畫面中央，我們把hiFlutter物件傳給它的child參數
+  //var img = Image.network("https://images.pexels.com/photos/6976092/pexels-photo-6976092.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  //  var appBody=Center(
  //    child: hiFlutter,
  //    heightFactor:2,
  //    widthFactor: 1.5,
@@ -44,17 +48,20 @@ void main() {
     color: Colors.white,
     padding: EdgeInsets.fromLTRB(50, 50, 50, 50),
   );
+  //建立appBar物件，它是AppBar類別的物件，我們把appTitle傳給它的title參數。
   var appBar=AppBar(
     title: appTitle,
     backgroundColor: Color(0xffff9800),
   );
-
+  //建立app物件
   var app =MaterialApp(
+    //home參數是設定一個Scaffold類別的物件，我們把前面建立的appBar物件設定給appBar參數，appBody物件設定給body參數
     home: Scaffold(
       appBar: appBar,
         body: appBody,
       backgroundColor: Colors.red),
   );
+  //主函式最後一行是呼叫runApp()函式，並且把app物件傳給它，這樣APP就會開始運作。
   runApp(app);
 }
 
