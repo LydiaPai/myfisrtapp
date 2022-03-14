@@ -15,11 +15,35 @@ void main() {
       );
 //建立appBody物件
   var img = Image.network("https://images.pexels.com/photos/6976092/pexels-photo-6976092.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-  var appBody=Center(
-    //child: hiFlutter,
-    child: img,
-  );
+ //  var appBody=Center(
+ //    child: hiFlutter,
+ //    heightFactor:2,
+ //    widthFactor: 1.5,
+ //    //child: img,
+ // );
 
+   // var appBody = Center(
+   //  child: Container(
+   //     margin: const EdgeInsets.all(10.0),
+   //    color: Colors.yellow,
+   //    width: 100.0,
+   //    height: 100.0,
+   //  ),
+   // );
+  // var appBody = Container(
+  //   child: hiFlutter,
+  //   alignment: Alignment.topCenter,
+  //   margin: EdgeInsets.all(50),
+  //   color: Colors.white,
+  //   padding: EdgeInsets.fromLTRB(30, 30, 30, 30),
+  // );
+  var appBody = Container(
+    child: hiFlutter,
+    alignment: Alignment.topCenter,
+    margin: EdgeInsets.all(100),
+    color: Colors.white,
+    padding: EdgeInsets.fromLTRB(50, 50, 50, 50),
+  );
   var appBar=AppBar(
     title: appTitle,
     backgroundColor: Color(0xffff9800),
